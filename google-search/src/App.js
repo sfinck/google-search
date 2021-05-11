@@ -19,7 +19,7 @@ function App() {
     axios.get("https://www.googleapis.com/books/v1/volumes?q="+book+"&key="+apiKey+"&maxResults=40")
     .then(data => {
       console.log(data.data.items);
-    setResult(data.data.items)
+      setResult(data.data.items)
     })
   }
 
@@ -36,6 +36,10 @@ function App() {
             <button type="submit" className="btn btn-danger">Search</button>
           </div>
         </form>
+       
+      {result.map(book => (
+        <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.title}/>
+      ))}
       </div>
   );
 }
