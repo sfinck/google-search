@@ -14,7 +14,7 @@ The google book search is an application that allows the user to search for book
 
 ## Usage 
 The following image displays the home page: 
-![Home Page](./assets/google-home.png)
+![Home Page](./google-search/assets/google-home.png)
 
 The following image displays the information displayed for each book:
 ![Google Search](./assets/google-search.png)
