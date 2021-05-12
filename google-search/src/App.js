@@ -38,11 +38,10 @@ function App() {
         </div>
       </form>
       {result.map(book => (
-        <a target="_blank" href={book.volumeInfo.previewLink}>
-          <div className="resultCard">
-            <li>
-           {book.volumeInfo.title} 
-            </li>
+        <a target="_blank" rel="noreferrer" href={book.volumeInfo.previewLink}>
+          <div className="card">
+          {book.volumeInfo.title} 
+          
           {/* <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.title}/> */}
           </div>
         </a>
