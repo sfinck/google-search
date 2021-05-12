@@ -32,19 +32,21 @@ function App() {
             className="form-control mt-10"
             placeholder="Enter keyword"
             autoComplete="off"
-
           />
-          <button type="submit" className="btn btn-danger">Search</button>
+          <button type="submit" className="btn btn-danger" id="button">Search</button>
         </div>
       </form>
+
       {result.map(book => (
-        <a target="_blank" rel="noreferrer" href={book.volumeInfo.previewLink}>
           <div className="card">
-          {book.volumeInfo.title} 
-          
-          {/* <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.title}/> */}
+            <li><b>Title:</b> <i> {book.volumeInfo.title}</i></li>
+            <li><b>Written by:</b> {book.volumeInfo.authors}</li>
+            <li><b>Description:</b> {book.volumeInfo.description}</li>
+
+            <a target="_blank" rel="noreferrer" href={book.volumeInfo.previewLink}button type="submit" className="btn btn-primary">View</a>
+
+            <button type="submit" className="btn btn-success">Save</button>
           </div>
-        </a>
       ))}
     </div>
   );
